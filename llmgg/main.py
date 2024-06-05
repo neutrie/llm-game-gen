@@ -3,7 +3,7 @@ from json import JSONDecodeError
 
 from llmgg.decoder import GameDataError
 from llmgg.game import Player
-from llmgg.loader import select_game_data
+from llmgg.loader import generate_game_data, select_game_data
 
 
 def eprint(*args: object) -> None:
@@ -11,8 +11,31 @@ def eprint(*args: object) -> None:
 
 
 def main() -> int:
+    print(
+        "Choose a method for loading game data:",
+        "`g`, `generate`",
+        "`s`, `select`",
+        "`q`, `quit`",
+        sep="\n",
+    )
+    load_data = generate_game_data
+    is_method_chosen = False
+    while not is_method_chosen:
+        loader_method = input("> ").strip().casefold()
+        match loader_method:
+            case "generate" | "g":
+                load_data = generate_game_data
+                is_method_chosen = True
+            case "select" | "s":
+                load_data = select_game_data
+                is_method_chosen = True
+            case "exit" | "quit" | "q":
+                return 0
+            case _:
+                print("Incorrect method.")
+
     try:
-        game_data = select_game_data()
+        game_data = load_data()
     except JSONDecodeError as e:
         eprint(f"ERROR: Unable to parse JSON: {e}")
         return 1

@@ -1,0 +1,36 @@
+{
+  "rooms": [
+    {
+      "roomStart": true,
+      "roomName": "Living room",
+      "roomDescription": "A cozy living room with a sofa and a TV",
+      "roomItems": [
+        {
+          "itemName": "Key",
+          "itemDescription": "A small rusty key"
+        }
+      ],
+      "roomRequirements": [],
+      "roomConnections": [
+        "Kitchen"
+      ]
+    },
+    {
+      "roomName": "Kitchen",
+      "roomDescription": "A kitchen with a fridge and a stove",
+      "roomItems": [
+        {
+          "itemObjective": true,
+          "itemName": "Spork",
+          "itemDescription": "Spoon + fork"
+        }
+      ],
+      "roomRequirements": [
+        "Key"
+      ],
+      "roomConnections": [
+        "Living room"
+      ]
+    }
+  ]
+}

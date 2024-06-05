@@ -18,3 +18,6 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
+
+llmgg/game_data/*
+!llmgg/game_data/spork.json

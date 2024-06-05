@@ -1,8 +1,9 @@
-import json
 import sys
+from json import JSONDecodeError
 
-from llmgg.decoder import GameDataDecoder, GameDataError
-from llmgg.game import GameData, Player
+from llmgg.decoder import GameDataError
+from llmgg.game import Player
+from llmgg.loader import select_game_data
 
 
 def eprint(*args: object) -> None:
@@ -11,9 +12,8 @@ def eprint(*args: object) -> None:
 
 def main() -> int:
     try:
-        with open("llmgg/game_data/spork.json") as f:
-            game_data: GameData = json.load(f, cls=GameDataDecoder)
-    except json.JSONDecodeError as e:
+        game_data = select_game_data()
+    except JSONDecodeError as e:
         eprint(f"ERROR: Unable to parse JSON: {e}")
         return 1
     except GameDataError as e:

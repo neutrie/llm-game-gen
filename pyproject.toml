@@ -12,3 +12,10 @@ dependencies = [
 
 [project.scripts]
 llmgg = "llmgg.main:main"
+
+[tool.setuptools.packages.find]
+namespaces = false
+include = ["llmgg"]
+
+[tool.setuptools.package-data]
+llmgg = ["game_data/*.json"]

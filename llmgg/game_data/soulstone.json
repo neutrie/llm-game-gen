@@ -1,0 +1,45 @@
+{
+  "rooms": [
+    {
+      "roomStart": true,
+      "roomName": "Painful entrance",
+      "roomDescription": "A fiery entrance to the Hall of Torment, where souls are punished for eternity",
+      "roomItems": [
+        {
+          "itemName": "Torch",
+          "itemDescription": "A flickering torch to light the way through the darkness of torment"
+        }
+      ],
+      "roomRequirements": [],
+      "roomConnections": [
+        "Screaming chamber"
+      ]
+    },
+    {
+      "roomName": "Screaming chamber",
+      "roomDescription": "A chamber filled with the anguished screams of damned souls",
+      "roomRequirements": [
+        "Torch"
+      ],
+      "roomConnections": [
+        "Painful entrance",
+        "Blazing abyss"
+      ]
+    },
+    {
+      "roomName": "Blazing abyss",
+      "roomDescription": "A seemingly bottomless pit of fiery torment, where souls are consumed by flames",
+      "roomItems": [
+        {
+          "itemObjective": true,
+          "itemName": "Soulstone",
+          "itemDescription": "A fragment of a soul, said to hold the power to escape the Hall of Torment"
+        }
+      ],
+      "roomRequirements": [],
+      "roomConnections": [
+        "Screaming chamber"
+      ]
+    }
+  ]
+}

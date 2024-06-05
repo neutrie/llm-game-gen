@@ -21,3 +21,6 @@ MANIFEST
 
 llmgg/game_data/*
 !llmgg/game_data/spork.json
+!llmgg/game_data/formula.json
+!llmgg/game_data/iron.json
+!llmgg/game_data/soulstone.json

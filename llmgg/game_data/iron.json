@@ -1,0 +1,67 @@
+{
+  "rooms": [
+    {
+      "roomStart": true,
+      "roomName": "Entrance",
+      "roomDescription": "A dark and ominous entrance to the mines",
+      "roomRequirements": [],
+      "roomConnections": [
+        "Mine shaft",
+        "Old tunnel",
+        "Smelting room"
+      ]
+    },
+    {
+      "roomName": "Old tunnel",
+      "roomDescription": "An abandoned tunnel filled with old mining equipment",
+      "roomItems": [
+        {
+          "itemName": "Pickaxe",
+          "itemDescription": "A rusty pickaxe for digging and exploring"
+        }
+      ],
+      "roomRequirements": [],
+      "roomConnections": [
+        "Entrance"
+      ]
+    },
+    {
+      "roomName": "Mine shaft",
+      "roomDescription": "A narrow tunnel deep in the mines",
+      "roomItems": [
+        {
+          "itemName": "Coal",
+          "itemDescription": "A lump of dark, precious coal"
+        },
+        {
+          "itemName": "Iron ore",
+          "itemDescription": "A chunk of raw iron ore, ready to be smelted"
+        }
+      ],
+      "roomRequirements": [
+        "Pickaxe"
+      ],
+      "roomConnections": [
+        "Entrance"
+      ]
+    },
+    {
+      "roomName": "Smelting room",
+      "roomDescription": "A room equipped with a forge for smelting ores into metals",
+      "roomItems": [
+        {
+          "itemObjective": true,
+          "itemName": "Iron ingot",
+          "itemDescription": "A solid iron ingot, crafted from smelted iron ore and coal"
+        }
+      ],
+      "roomRequirements": [
+        "Coal",
+        "Iron ore"
+      ],
+      "roomConnections": [
+        "Entrance"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "rooms": [
+    {
+      "roomStart": true,
+      "roomName": "SpongeBob SquarePants' house",
+      "roomDescription": "A pineapple under the sea, where SpongeBob lives",
+      "roomItems": [],
+      "roomRequirements": [],
+      "roomConnections": [
+        "Conch street"
+      ]
+    },
+    {
+      "roomName": "Conch street",
+      "roomDescription": "A lively street in Bikini Bottom",
+      "roomItems": [],
+      "roomRequirements": [],
+      "roomConnections": [
+        "SpongeBob SquarePants' house",
+        "Krusty Krab",
+        "Mr. Krabs' house"
+      ]
+    },
+    {
+      "roomName": "Mr. Krabs' house",
+      "roomDescription": "The residence of Mr. Krabs and his daughter, Pearl",
+      "roomItems": [
+        {
+          "itemName": "Krusty Krab safe key",
+          "itemDescription": "A weathered key used to unlock the Krusty Krab safe"
+        }
+      ],
+      "roomRequirements": [],
+      "roomConnections": [
+        "Conch street"
+      ]
+    },
+    {
+      "roomName": "Krusty Krab",
+      "roomDescription": "The iconic fast food joint owned by Mr. Krabs, where the secret formula is kept",
+      "roomItems": [
+        {
+          "itemObjective": true,
+          "itemName": "Krabby Patty secret formula",
+          "itemDescription": "The highly sought-after secret recipe for the world's most delicious fast food"
+        }
+      ],
+      "roomRequirements": [
+        "Krusty Krab safe key"
+      ],
+      "roomConnections": [
+        "Conch street"
+      ]
+    }
+  ]
+}
